@@ -57,9 +57,33 @@ export default {
 @tailwind utilities;
 ```
 
+### Tailwind CSS v4 Configuration (New Way)
+
+11. Install the Vite plugin for Tailwind CSS:
+```bash
+npm install -D @tailwindcss/vite
+```
+
+12. Update your `vite.config.ts` or `vite.config.js` file:
+```js
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite'
+
+export default defineConfig({
+  plugins: [
+    tailwindcss(),
+  ],
+})
+```
+
+13. Add the Tailwind CSS import globally inside your CSS file:
+```css
+@import "tailwindcss";
+```
+
 ### Start the Project
 
-11. Run the project:
+14. Run the project:
 ```bash
 npm run dev
 ```
@@ -117,18 +141,15 @@ npm install -D tailwindcss postcss autoprefixer
 ```js
 const config = {
   plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
+    "@tailwindcss/postcss": {},
   },
 };
 export default config;
 ```
 
-5. Import Tailwind CSS globally in `globals.css` or `_app.tsx`:
+5. Import Tailwind CSS globally:
 ```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 ```
 
 6. Documentation Links:
