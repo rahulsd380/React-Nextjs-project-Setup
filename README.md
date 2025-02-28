@@ -2,7 +2,7 @@
 
 ## How to Create and Maintain a Professional Codebase in React and Next.js with Tailwind CSS v4
 
-### Project Setup Steps For React.JS using Typescript and Tailwind CSS V4
+### Project Setup Steps
 
 1. Create the project using Vite:
 ```bash
@@ -114,3 +114,47 @@ npm run dev
 - Maintain consistent folder structure.
 - Follow DRY (Don't Repeat Yourself) principle.
 - Write clean, reusable code.
+
+### Next.js Project Setup
+
+1. Create the project using Next.js:
+```bash
+npx create-next-app@latest
+```
+2. Answer the prompts:
+   - What is your project named? `my-app`
+   - Would you like to use TypeScript? `No / Yes`
+   - Would you like to use ESLint? `No / Yes`
+   - Would you like to use Tailwind CSS? `No / Yes`
+   - Would you like your code inside a `src/` directory? `No / Yes`
+   - Would you like to use App Router? (recommended) `No / Yes`
+   - Would you like to use Turbopack for `next dev`? `No / Yes`
+   - Would you like to customize the import alias (`@/*` by default)? `No / Yes`
+   - What import alias would you like configured? `@/*`
+
+3. Install Tailwind CSS:
+```bash
+npm install -D tailwindcss postcss autoprefixer
+```
+
+4. Create `postcss.config.mjs` with the following content:
+```js
+const config = {
+  plugins: {
+    "@tailwindcss/postcss": {},
+  },
+};
+export default config;
+```
+
+5. Import Tailwind CSS globally:
+```css
+@import "tailwindcss";
+```
+
+6. Documentation Links:
+- Vite with Tailwind CSS: [Tailwind CSS Vite Installation Guide](https://tailwindcss.com/docs/installation/using-vite)
+- Next.js with Tailwind CSS: [Tailwind CSS Next.js Installation Guide](https://tailwindcss.com/docs/installation/framework-guides/nextjs)
+
+### Navigation
+[Go to Next.js Project Setup](#nextjs-project-setup)
