@@ -57,33 +57,9 @@ export default {
 @tailwind utilities;
 ```
 
-### Tailwind CSS v4 Configuration (New Way)
-
-11. Install the Vite plugin for Tailwind CSS:
-```bash
-npm install -D @tailwindcss/vite
-```
-
-12. Update your `vite.config.ts` or `vite.config.js` file:
-```js
-import { defineConfig } from 'vite'
-import tailwindcss from '@tailwindcss/vite'
-
-export default defineConfig({
-  plugins: [
-    tailwindcss(),
-  ],
-})
-```
-
-13. Add the Tailwind CSS import globally inside your CSS file:
-```css
-@import "tailwindcss";
-```
-
 ### Start the Project
 
-14. Run the project:
+11. Run the project:
 ```bash
 npm run dev
 ```
@@ -141,15 +117,18 @@ npm install -D tailwindcss postcss autoprefixer
 ```js
 const config = {
   plugins: {
-    "@tailwindcss/postcss": {},
+    tailwindcss: {},
+    autoprefixer: {},
   },
 };
 export default config;
 ```
 
-5. Import Tailwind CSS globally:
+5. Import Tailwind CSS globally in `globals.css` or `_app.tsx`:
 ```css
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 ```
 
 6. Documentation Links:
@@ -157,4 +136,5 @@ export default config;
 - Next.js with Tailwind CSS: [Tailwind CSS Next.js Installation Guide](https://tailwindcss.com/docs/installation/framework-guides/nextjs)
 
 ### Navigation
+[Go to React Project Setup](#project-setup-steps)
 [Go to Next.js Project Setup](#nextjs-project-setup)
