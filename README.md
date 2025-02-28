@@ -81,6 +81,49 @@ export default defineConfig({
 @import "tailwindcss";
 ```
 
+### React Routing Setup
+
+1. Inside the `layouts` folder, create a `MainLayout` component that renders its `children` prop.
+
+2. In the `routes` folder, create a `routes.tsx` or `routes.jsx` file and paste the following code:
+```tsx
+import { createBrowserRouter } from "react-router-dom";
+import MainLayout from "../layouts/MainLayout";
+import Home from "../pages/Home";
+import NotFound from "../pages/NotFound";
+
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainLayout />,
+    errorElement: <NotFound />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+    ],
+  },
+
+  // Add more routes here if needed
+]);
+```
+
+3. In `main.tsx` or `main.jsx`, import the routes and use `RouterProvider`:
+```tsx
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './routes/routes'
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>
+)
+```
+
 ### Start the Project
 
 14. Run the project:
