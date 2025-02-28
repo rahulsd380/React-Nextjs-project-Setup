@@ -229,5 +229,5 @@ npm run dev
 - Material Icon Theme
 
 ### Navigation  
-[Go to React Project Setup](#project-setup-steps)  
+[Go to React Project Setup](#react.js-project-setup-steps)  
 [Go to Next.js Project Setup](#nextjs-project-setup)
