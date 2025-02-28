@@ -2,7 +2,7 @@
 
 ## How to Create and Maintain a Professional Codebase in React and Next.js with Tailwind CSS v4 + TypeScript
 
-### React.js Project Setup Steps 
+<h3 id="react.js-project-setup-steps">React.js Project Setup Steps</h3>
 
 1. Create the project using Vite:
 ```bash
@@ -229,5 +229,5 @@ npm run dev
 - Material Icon Theme
 
 ### Navigation  
-[Go to React Project Setup](#react-js-project-setup-steps)     
+[Go to React Project Setup](#react.js-project-setup-steps)     
 [Go to Next.js Project Setup](#nextjs-project-setup)
