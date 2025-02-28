@@ -203,6 +203,31 @@ npm run dev
 - Vite with Tailwind CSS: [Tailwind CSS Vite Installation Guide](https://tailwindcss.com/docs/installation/using-vite)
 - Next.js with Tailwind CSS: [Tailwind CSS Next.js Installation Guide](https://tailwindcss.com/docs/installation/framework-guides/nextjs)
 
+### Deploy Project on Vercel
+
+1. Create `vercel.json` file in the root of your project.
+2. Paste the following code inside the file:
+```json
+{
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+}
+```
+
+### Essential VS Code Extensions
+- Auto Close Tag
+- Auto Import
+- Auto Rename Tag
+- Bracket Pair Colorizer
+- React Snippets
+- Prettier
+- React Extension Pack
+- React Code Snippets
+- Tailwind CSS IntelliSense
+- Code Spell Checker
+- Console Ninja
+- JavaScript (ES6) Code Snippets
+- Material Icon Theme
+
 ### Navigation  
 [Go to React Project Setup](#project-setup-steps)  
 [Go to Next.js Project Setup](#nextjs-project-setup)
